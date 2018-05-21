@@ -1,0 +1,24 @@
+<h1>Lessons#index</h1>
+<table class='table table-fixed table-hover'>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>lesson_time</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @lessons.each do |lesson| %>
+      <tr>
+        <td><%= lesson.title %></td>
+        <td><%= lesson.lesson_time %></td>
+        <td><%= link_to 'Show', lesson %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Lesson', new_lesson_path %>
